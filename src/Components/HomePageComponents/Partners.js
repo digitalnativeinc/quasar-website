@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import { createUseStyles, useTheme } from "react-jss";
+// import { createUseStyles, useTheme } from "react-jss";
 import classNames from "classnames";
 
 import AnimateHeight from "react-animate-height";
 
 // Images
-import iosg from "assets/images/iosg-279063b244.png";
 import tendermint from "assets/images/tendermint-logo.png";
 
 // const useStyles = createUseStyles((Themes) => {
@@ -39,7 +38,6 @@ function Partners(props) {
     } else {
       showBtn = partners.length > 4 ? true : false;
     }
-    console.log(showBtn);
     return showBtn;
   };
 

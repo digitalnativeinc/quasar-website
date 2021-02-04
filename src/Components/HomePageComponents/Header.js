@@ -3,7 +3,8 @@ import { createUseStyles, useTheme } from "react-jss";
 import classNames from "classnames";
 
 // images
-import waveSVG from "assets/images/wave-32adc8fbc3.svg";
+import waveSVG from "assets/images/interchain.png";
+import logo from "assets/images/quasar-logo.png";
 
 const useStyles = createUseStyles((Themes) => {
   return {
@@ -31,6 +32,10 @@ const useStyles = createUseStyles((Themes) => {
       transform: "translate(0px, 20px)",
       opacity: 0,
       visibility: "hidden",
+    },
+    ["header-w-logo"]: {
+      padding: 0,
+      height: "85px",
     },
   };
 });
@@ -101,7 +106,12 @@ function Header(props) {
 
   return (
     <div className="header--container">
-      <header>
+      <header
+        className={classNames(
+          classes["header-w-logo"],
+          "row d-flex align-items-center"
+        )}
+      >
         <div className="container">
           <div className="row d-flex align-items-center">
             <div className="text-center text-md-left col-md-2 relative">
@@ -115,9 +125,7 @@ function Header(props) {
                 <span></span>
               </a>
               <a href="#" className="logo">
-                <svg viewBox="0 0 79 16">
-                  <use xlinkHref="images/icons-375851bb4a.svg#logo" />
-                </svg>
+                <img src={logo} width="50px" />
               </a>
             </div>
             <div className="col-md-10 text-right d-none d-md-block">

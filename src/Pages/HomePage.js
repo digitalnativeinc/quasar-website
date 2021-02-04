@@ -1,11 +1,5 @@
 import { createUseStyles, useTheme } from "react-jss";
-import classNames from "classnames";
-
-// Images
-import bgHero from "assets/images/bg_hero-90e8802c19.jpg";
-import iconsSVG from "assets/images/icons-375851bb4a.svg";
-import iosg from "assets/images/iosg-279063b244.png";
-import earnSVG from "assets/images/earn-d05846f151.svg";
+// import classNames from "classnames";
 
 // Components
 import Header from "Components/HomePageComponents/Header";

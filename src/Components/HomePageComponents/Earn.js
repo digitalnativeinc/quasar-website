@@ -2,7 +2,7 @@ import { createUseStyles, useTheme } from "react-jss";
 import classNames from "classnames";
 
 // Images
-import earnSVG from "assets/images/earn-d05846f151.svg";
+import earnSVG from "assets/images/earn.png";
 
 // const useStyles = createUseStyles((Themes) => {
 //   return {};
