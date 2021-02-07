@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 // images
 import waveSVG from "assets/images/interchain.png";
-import logo from "assets/images/quasar-logo.png";
+import logo from "assets/images/quasar-logo-shadow.png";
 
 const useStyles = createUseStyles((Themes) => {
   return {
@@ -113,7 +113,10 @@ function Header(props) {
         )}
       >
         <div className="container">
-          <div className="row d-flex align-items-center">
+          <div
+            className="row d-flex align-items-center"
+            style={{ paddingLeft: "10px", paddingRight: "10px" }}
+          >
             <div className="text-center text-md-left col-md-2 relative">
               <a
                 href="#"
@@ -125,7 +128,7 @@ function Header(props) {
                 <span></span>
               </a>
               <a href="#" className="logo">
-                <img src={logo} width="50px" />
+                <img className="spin" src={logo} width="50px" />
               </a>
             </div>
             <div className="col-md-10 text-right d-none d-md-block">
@@ -148,12 +151,9 @@ function Header(props) {
         </div>
       </header>
 
-      <img src={waveSVG} alt="image" className="wave" />
+      <img src={waveSVG} alt="image" className="wave float" />
       <div className="container content relative" style={{ height: "90%" }}>
-        <div
-          className="row d-flex align-items-center relative"
-          style={{ height: "90%" }}
-        >
+        <div className="row d-flex align-items-center relative h-inner">
           <div className="col-10 col-md-6 col-xl-5">
             <h1>Interchain lending and borrowing protocol</h1>
             <p>

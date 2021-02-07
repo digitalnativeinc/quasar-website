@@ -30,13 +30,19 @@ function Newsletter(props) {
             <input type="submit" name="submit" value="Subscribe" />
   </form>*/}
           <div className={classes.icon}>
-            <img src={twitter} />
+            <img src={twitter} alt="twitter link" />
           </div>
           <div className={classes.icon}>
-            <img src={discord} />
+            <a
+              href="https://discord.gg/g5yZbWzY"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={discord} alt="discord link" />
+            </a>
           </div>
           <div className={classes.icon}>
-            <img src={email} />
+            <img src={email} alt="email address" />
           </div>
         </div>
       </div>

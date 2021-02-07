@@ -5037,8 +5037,9 @@ main {
     background: #b22eb8;
     height: 100vh;
     z-index: 1;
-    padding-top: 100px;
     opacity: 0;
+    padding-left: 34px;
+    padding-top: 100px;
   }
   .menucontainer li {
     display: block;
@@ -5150,12 +5151,43 @@ ul li a:hover:before {
   }
 }
 .header--container {
-  -ms-background-size: cover !important;
-  background-size: cover !important;
+  -ms-background-size: 120% 120% !important;
+  background-size: 120% 120% !important;
   background-image: url(../assets/images/bg_hero-90e8802c19.jpg);
   background-position: top;
   min-height: 600px;
   height: 100vh;
+  animation: move-bg-1 6s linear infinite alternate;
+}
+
+@media (max-width: 1400px) {
+  .header--container {
+    -ms-background-size: cover !important;
+    background-size: cover !important;
+    animation: move-bg-1 16s linear infinite alternate;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header--container {
+    -ms-background-size: cover !important;
+    background-size: cover !important;
+    animation: move-bg-1 16s linear infinite alternate;
+  }
+}
+
+.h-inner {
+  height: 90%;
+}
+
+@keyframes move-bg-1 {
+  from {
+    background-position: 0px 0px;
+  }
+
+  to {
+    background-position: 100% 100%;
+  }
 }
 .header--container,
 .standard-section {
@@ -5179,7 +5211,28 @@ ul li a:hover:before {
   background: none;
 }
 .gradient {
+  background-size: 200% 200%;
+  background-position: 0 50%;
   background-image: linear-gradient(130deg, #2a2f8f 30%, #a036b3);
+  animation: move-bg 5s infinite alternate;
+}
+
+/* @media (max-width: 1400px) {
+  .gradient {
+    animation: move-bg 5s infinite alternate;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .gradient {
+    animation: move-bg 5s infinite alternate;
+  }
+} */
+
+@keyframes move-bg {
+  50% {
+    background-position: 100% 50%;
+  }
 }
 @media (min-width: 768px) {
   img.wave {
@@ -5191,12 +5244,13 @@ ul li a:hover:before {
     transform: translateY(-50%) translateX(-10%);
   }
 }
+
 @media (max-width: 767.98px) {
   img.wave {
     position: absolute;
     width: 80%;
     /* max-width: 400px; */
-    bottom: 20px;
+    bottom: 40px;
     left: 0;
     transform: translateX(10%);
     right: 0;
@@ -5265,7 +5319,10 @@ ul li a:hover:before {
 }
 .newsletter {
   padding: 60px 0;
+  background-size: 200% 200%;
+  background-position: 0 50%;
   background-image: linear-gradient(-85deg, #1b2e89 17%, #cf21c1);
+  animation: move-bg 8s infinite alternate;
 }
 @media (min-width: 768px) {
   .newsletter {
@@ -5309,4 +5366,117 @@ ul li a:hover:before {
 footer {
   background: #080523;
   padding: 40px 0;
+}
+
+.shaky-image {
+  animation: shake 5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  2%,
+  18% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  4%,
+  16% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  6%,
+  10%,
+  14% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  8%,
+  12% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+.rotating-image {
+  animation: animate 5s forwards infinite;
+  /* perspective: 800px; */
+}
+
+@keyframes animate {
+  40% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  55% {
+    transform: rotate(2deg);
+  }
+  65% {
+    transform: rotate(-2deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+}
+
+.float {
+  animation: float 10s ease-in-out infinite;
+}
+
+@media (max-width: 767.98px) {
+  .float {
+    animation: float-mobile 10s ease-in-out infinite;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .float {
+    animation: float-mobile 8s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(-47.5%) translateX(-12.5%);
+  }
+  50% {
+    transform: translateY(-52.5%) translateX(-7.5%);
+  }
+  100% {
+    transform: translateY(-47.5%) translateX(-12.5%);
+  }
+}
+
+@keyframes float-mobile {
+  0% {
+    transform: translateY(-2.5%) translateX(12.5%);
+  }
+  50% {
+    transform: translateY(2.5%) translateX(7.5%);
+  }
+  100% {
+    transform: translateY(-2.5%) translateX(12.5%);
+  }
+}
+
+.spin {
+  animation: spin 10s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(360deg);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+
+  55% {
+    transform: rotate(0deg);
+  }
 }

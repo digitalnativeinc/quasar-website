@@ -23,7 +23,7 @@ function Earn(props) {
               LEARN MORE
             </a>
           </div>
-          <div className="col-md-6 order-1 order-md-2">
+          <div className="col-md-6 order-1 order-md-2 shaky-image">
             <img src={earnSVG} alt="image" />
           </div>
         </div>

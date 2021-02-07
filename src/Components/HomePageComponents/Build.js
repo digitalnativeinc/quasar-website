@@ -16,7 +16,7 @@ function Build(props) {
     <section className="standard-section build">
       <div className="container">
         <div className="row d-flex align-items-center text-center text-md-left">
-          <div className="col-md-6">
+          <div className="col-md-6 rotating-image">
             <img src={buildSVG} alt="image" />
           </div>
           <div className="col-md-6">
