@@ -1,9 +1,9 @@
 import { createUseStyles, useTheme } from "react-jss";
-// import classNames from "classnames";
+import classNames from "classnames";
 
 import twitter from "assets/images/twitter-white.png";
 import discord from "assets/images/discord-white.png";
-import email from "assets/images/email.png";
+import medium from "assets/images/medium-white.png";
 
 const useStyles = createUseStyles((Themes) => {
   return {
@@ -25,11 +25,11 @@ function Newsletter(props) {
           <em>Follow us on</em>
         </div>
         <div className="row d-flex align-items-center justify-content-center mt-px40 text-center">
-          {/*<form className="col-12" method="post">
-            <input type="email" name="email" placeholder="Your email address" />
-            <input type="submit" name="submit" value="Subscribe" />
-  </form>*/}
-          <div className={classes.icon}>
+          <div
+            className={classes.icon}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={twitter} alt="twitter link" />
           </div>
           <div className={classes.icon}>
@@ -41,8 +41,15 @@ function Newsletter(props) {
               <img src={discord} alt="discord link" />
             </a>
           </div>
-          <div className={classes.icon}>
-            <img src={email} alt="email address" />
+          <div
+            className={classNames(
+              classes.icon,
+              "row d-flex align-items-center justify-content-center"
+            )}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={medium} alt="medium link" width="50px" />
           </div>
         </div>
       </div>
